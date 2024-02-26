@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  app1:
+    image: ruby:3.3
+    container_name: app1
+    tty: true
+    env_file:
+      - .env
+    working_dir: /app
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/app
+      - rubygems:/usr/local/bundle
+    entrypoint: ./entrypoint.sh
+    command: "bin/dev"
+    networks:
+      - default
+      - rabbitmq_network
+
+volumes:
+  rubygems:
+
+networks:
+  rabbitmq_network:
+    name: rabbitmq_network
+    external: true
+
