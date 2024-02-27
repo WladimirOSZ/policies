@@ -9,7 +9,7 @@ services:
       - .env
     working_dir: /app
     ports:
-      - "3002:3000"
+      - "3002:3002"
     volumes:
       - .:/app
       - rubygems:/usr/local/bundle
@@ -17,6 +17,8 @@ services:
       - postgres
       - rabbitmq
     entrypoint: ./entrypoint.sh
+    environment:
+      - PORT=3002
     command: "bin/dev"
     networks:
       - default
