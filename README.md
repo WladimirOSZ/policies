@@ -2,7 +2,26 @@
 
 ## Introduction
 
-The Policy Management System is a simplified example application designed to demonstrate the integration of various technologies commonly used in a modern application, including Docker, Rails, PostgreSQL, RabbitMQ, and GraphQL. The system allows for the creation and visualization of vehicle policies, with a focus on learning and understanding the mentioned technologies.
+The Policy Management System is a simplified example application designed to demonstrate the integration of various technologies commonly used in a modern application, including Docker, Rails, PostgreSQL, RabbitMQ, and GraphQL. The system allows for the creation and11 visualization of vehicle policies, with a focus on learning and understanding the mentioned technologies.
+
+<p align="center">
+  <a href="https://docs.docker.com/">
+    <img src="https://img.shields.io/badge/docker-blue?style=for-the-badge&logo=docker&logoColor=white"/>
+  </a>
+  <a href="https://rubyonrails.org/">
+    <img src="https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"/>
+  </a>
+  <a href="https://www.rabbitmq.com/">
+    <img src="https://img.shields.io/badge/Rabbitmq-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white"/>
+  </a>
+  <a href="https://graphql.org/">
+    <img src="https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white"/>
+  </a>
+  <a href="https://www.postgresql.org/docs/">
+    <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+  </a>
+</p>
+
 
 ## Requirements
 
@@ -121,10 +140,3 @@ query{
 }
 ```
 
-## Technologies Used
-
-- Ruby on Rails
-- PostgreSQL
-- RabbitMQ
-- GraphQL
-- Docker
