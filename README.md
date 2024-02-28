@@ -111,11 +111,11 @@ mutation{
     policyId: "81",
     emissionDate: "2011-10-10",
     endCoverageDate: "2030-10-19",
-    insuredName: "bruno",
+    insuredName: "Wladimir Oliveira Souza",
     insuredCpf: "12312212312",
-    vehicleBrand: "AUDI2",
-    vehicleModel: "A42",
-    vehicleYear: "1233",
+    vehicleBrand: "Mitsubishi",
+    vehicleModel: "Lancer Evolution X",
+    vehicleYear: "2024",
     vehicleLicensePlate: "CRT-7222"
   }){
     status
