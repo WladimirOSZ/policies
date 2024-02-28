@@ -5,7 +5,7 @@ class PoliciesController < ActionController::API
   end
 
   def show
-    policy = Policy.find(params[:id])
+    policy = Policy.find_by(policy_id: params[:id])
     render json: policy, include: %i[insured vehicle]
   end
 end
