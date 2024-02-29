@@ -16,4 +16,6 @@ echo 'Waiting for rabbitmq to start...'
 sleep 10
 docker exec -it app2 bash -c "ruby start-bunny.rb"
 
-echo "Apps are up and running!"
+echo -e "\n\e[1;32mSuccess! Apps are up and running!\e[0m"
+echo -e "You can access the playground at \e[1;34mhttp://localhost:3001/graphiql\e[0m"
+echo -e "To stop the apps, run \e[1;33m./stop.sh\e[0m"

@@ -5,7 +5,10 @@ class PoliciesController < ActionController::API
   end
 
   def show
-    policy = Policy.find_by(policy_id: params[:id])
+    policy = Rails.cache.fetch("policy_#{params[:id]}", expires_in: 7.days) do
+      Policy.find_by(policy_id: params[:id])
+    end
+  
     render json: policy, include: %i[insured vehicle]
   end
 end
