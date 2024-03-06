@@ -133,7 +133,7 @@ You can use the following query to retrieve policy information:
 
 ```graphql
 query{
-  getPolicies(policyId: 2){
+  getPolicies(policyId: 81){
     policyId,
     issueDate
   }
