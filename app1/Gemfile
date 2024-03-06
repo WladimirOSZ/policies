@@ -47,6 +47,8 @@ gem "bunny"
 gem 'graphql'
 
 gem 'httparty'
+
+gem 'omniauth-google-oauth2'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
