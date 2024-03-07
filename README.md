@@ -135,7 +135,10 @@ You can use the following query to retrieve policy information:
 query{
   getPolicies(policyId: 81){
     policyId,
-    issueDate
+    issueDate,
+    insuredName,
+    vehicleYear,
+    vehicleBrand
   }
 }
 ```
