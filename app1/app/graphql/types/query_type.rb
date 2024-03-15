@@ -27,11 +27,11 @@ module Types
     # end
 
 
-    field :get_policies, Types::PoliciesType, null: true, description: "Receiveing by id" do
+    field :get_policy, Types::PoliciesType, null: true, description: "Receiveing by id" do
       argument :policy_id, ID, required: true, description: "Policy id"
     end
 
-    def get_policies(policy_id:)
+    def get_policy(policy_id:)
       response = HTTParty.get("http://app2:3002/policies/#{policy_id}")
       json_response = JSON.parse(response.body)
       {
@@ -47,6 +47,29 @@ module Types
         vehicle_year: json_response["vehicle"]["year"],
         vehicle_license_plate: json_response["vehicle"]["license_plate"]
       }
+    end
+
+    field :get_all_policies, [Types::PoliciesType], null: true, description: "Get all policies"
+
+    def get_all_policies
+      response = HTTParty.get("http://app2:3002/policies")
+      json_response = JSON.parse(response.body)
+      json_response.map do |policy|
+        {
+          id: policy["id"],
+          policy_id: policy["policy_id"],
+          issue_date: policy["issue_date"],
+          coverage_end_date: policy["coverage_end_date"],
+          insured_id: policy["insured"]["id"],
+          insured_name: policy["insured"]["name"],
+          insured_cpf: policy["vehicle"]["cpf"],
+          vehicle_id: policy["vehicle"]["id"],
+          vehicle_brand: policy["vehicle"]["brand"],
+          vehicle_model: policy["vehicle"]["model"],
+          vehicle_year: policy["vehicle"]["year"],
+          vehicle_license_plate: policy["vehicle"]["license_plate"]
+        }
+      end
     end
   end
 end

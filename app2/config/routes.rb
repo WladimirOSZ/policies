@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # get "policies", to: "policies#index"
-  resources :policies, only: %i[index, show]
+  resources :policies, only: %i[index show]
 end

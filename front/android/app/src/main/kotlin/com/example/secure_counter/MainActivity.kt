@@ -1,4 +1,4 @@
-package com.example.front
+package com.example.secure_counter
 
 import io.flutter.embedding.android.FlutterActivity
 
